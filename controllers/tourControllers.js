@@ -8,7 +8,7 @@ const getAllTours = (req, res) => {
 
 // POST /tours
 const createTour = (req, res) => {
-  const newTour = Tour.addOne({ ...req.body }); // Spread the req.body object
+const newTour = Tour.addOne({ ...req.body }); // Spread the req.body object
 
   if (newTour) {
     res.status(201).json(newTour); // 201 Created
